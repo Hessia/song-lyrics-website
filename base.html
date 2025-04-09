@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Lyrics Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="{% block body_class %}default{% endblock %}">
+    <div class="top-bar">
+        <h1>⌞   𝙼𝚞̈𝚣𝚒𝚔𝚊𝚕   ⌝</h1>
+        <div class="top-right">
+            {% if 'username' in session %}
+                <span class="welcome">👤 {{ session['username'] }}</span>
+                <a class="btn" href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a class="btn" href="{{ url_for('login') }}">Login</a>
+                <a class="btn" href="{{ url_for('signup') }}">Sign up</a>
+            {% endif %}
+
+            <form action="{{ url_for('search') }}" method="GET" class="search-form">
+                <input type="text" name="query" placeholder="Search songs or artists" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
