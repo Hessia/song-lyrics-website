@@ -78,7 +78,7 @@ This project was developed as part of the **Web Development (IY4013)** course to
 
 ## **Installation Instructions**
 
-To set up the Song Lyrics Website on your local machine, run "app.py" file and copy the IP address given in terminal. Then go to your browser and paste the IP address to the search, it will take you to the website.
+To set up the Song Lyrics Website on your local machine, made sure EVERY file is downloaded. After that run "app.py" file and copy the IP address given in terminal. Then go to your browser and paste the IP address to the search, it will take you to the website.
 
 
 ### 1. **Clone the Repository**
